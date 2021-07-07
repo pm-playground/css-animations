@@ -1,0 +1,22 @@
+button {
+  height: 99px;
+  width: 290px;
+  font-size: 28px;
+  color: white;
+  background-color: tomato;
+  border: none;
+  margin: 1em;
+  /* transition-property: background-color color width; */
+  /* transition-property: all; change all properties*/
+  /* transition-duration: 1s; */
+  /* transition-property transition-duration timing-function transition-delay*/
+  transition: background-color 3s ease-in-out 1s, color 1s ease-in 4s, border-radius 2s ease-out 5s;
+
+}
+
+button:hover {
+  background-color: green;
+  color: black;
+  /* width: 600px; */
+  border-radius: 50px;
+}

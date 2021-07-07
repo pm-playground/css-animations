@@ -1,0 +1,563 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: whitesmoke;
+}
+h1 {
+  text-align: center;
+  background-color: tomato;
+  margin: 0 0 2em 0;
+  padding: 1em 0 2em 0;
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4em;
+  place-items: center;
+  margin-bottom: 2em;
+}
+/** BUTTON 1 */
+/*! the parent element should be display flex or grid in order the overflow to hide the before and after pseudo elements */
+.button1 {
+  text-decoration: none;
+  color: #272727;
+  font-family: monospace;
+  font-size: 45px;
+  border: 5px solid black;
+  padding: 40px 80px;
+  position: relative;
+  /*! 👇 hides the before pseudo element */
+  overflow: hidden;
+}
+
+.button1:before {
+  content: "";
+  position: absolute;
+  /* 👇 position element in the top left corner */
+  left: 0;
+  top: 0;
+  background-color: #fff200;
+  /*! 👇 bottom 2 make the before element fill its parent */
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  transform-origin: top right;
+  transform: rotate(180deg);
+  transition: transform 1s;
+}
+
+.button1:hover::before {
+  transform: rotate(0deg);
+}
+
+/** BUTTON 2 */
+
+.button2 {
+  text-decoration: none;
+  color: #351435;
+  font-family: sans-serif;
+  font-size: 40px;
+  border: 3px solid#351435;
+  padding: 40px 80px;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.button2:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #351435;
+  z-index: -1;
+  /*! 👇 position the before element */
+  transform: translateX(-100%);
+  /* transform: translateY(-100%); */
+  transition: all 1s;
+}
+
+.button2:hover:before {
+  transform: translateX(0);
+}
+
+.button2:hover {
+  color: white;
+}
+
+/** BUTTON 3 */
+
+.button3 {
+  padding: 40px 80px;
+  font-family: monospace;
+  text-decoration: none;
+  color: #262626;
+  font-size: 45px;
+  letter-spacing: 2px;
+  border: 5px solid #262626;
+  position: relative;
+  transition: 1s;
+}
+
+.button3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  transition: 1s;
+  transform: rotateX(90deg);
+  z-index: -1;
+}
+
+.button3:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  transition: 1s;
+  transform: rotateY(90deg);
+  z-index: -1;
+}
+.button3:hover:before,
+.button3:hover:after {
+  transform: rotateX(0deg);
+  transform: rotateY(0deg);
+}
+
+.button3:hover {
+  color: white;
+}
+
+/** BUTTON 4 */
+
+.button4 {
+  text-decoration: none;
+  padding: 40px 80px;
+  color: tomato;
+  border: 3px solid tomato;
+  text-transform: uppercase;
+  font-size: 40px;
+  font-family: cursive;
+  font-weight: 300;
+  letter-spacing: -2px;
+  transition: all 0.5s;
+}
+
+.button4:hover {
+  font-weight: 900;
+  letter-spacing: 10px;
+  border: 7px solid tomato;
+}
+
+/** BUTTON 5 */
+
+.button5 {
+  text-decoration: none;
+  color: #5a079e;
+  font-family: sans-serif;
+  font-size: 40px;
+  border: 3px solid#5a079e;
+  padding: 40px 80px;
+  position: relative;
+  transition: all 1s;
+  overflow: hidden;
+}
+
+.button5:before {
+  content: "YEAH!";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #5a079e;
+  /*! 👇 position the before element */
+  /* transform: translateX(-100%); */
+  transform: translateY(-100%);
+  transition: all 1s;
+  display: grid;
+  place-items: center;
+}
+
+.button5:hover:before {
+  transform: translateX(0);
+}
+
+.button5:hover {
+  color: white;
+}
+
+/** BUTTON 6 */
+
+.button6 {
+  text-decoration: none;
+  color: crimson;
+  font-family: fantasy;
+  font-size: 40px;
+  border: 4px solid crimson;
+  padding: 40px 80px;
+  transition: all 0.4s;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+.button6:hover {
+  background-color: crimson;
+}
+
+.button6:before {
+  content: "";
+  background-color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  transform: translateX(-100%) rotate(45deg);
+  transition: all 0.4s;
+}
+.button6:hover {
+  color: white;
+}
+.button6:hover:before {
+  transform: translateX(100%) rotate(45deg);
+}
+
+/* button  */
+.button7 {
+  text-decoration: none;
+  padding: 40px 80px;
+  font-size: 40px;
+  border: 4px solid #262626;
+  background-color: #262626;
+  font-family: sans-serif;
+  position: relative;
+  color: transparent;
+  overflow: hidden;
+}
+
+.button7:before {
+  content: "Hover Me";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fffa65;
+  display: grid;
+  place-items: center;
+  color: #262626;
+  transition: all 0.5s;
+}
+
+.button7:after {
+  content: "Hover Me";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fffa65;
+  display: grid;
+  place-items: center;
+  color: #262626;
+  transition: all 0.5s;
+  transform: translate(-100%, 100%);
+}
+
+.button7:hover:before {
+  transform: translate(100%, -100%);
+}
+
+.button7:hover:after {
+  transform: translate(0, 0);
+}
+
+/* button 8 */
+.button8 {
+  text-decoration: none;
+  padding: 40px 80px;
+  font-size: 40px;
+  border: 4px solid #262626;
+  color: #262626;
+  background-color: white;
+  font-family: sans-serif;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.button8:before {
+  content: "Hover Me";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #262626;
+  color: white;
+  display: grid;
+  place-items: center;
+  transform: scale(5);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.button8:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* button 9 */
+.button9 {
+  text-decoration: none;
+  padding: 20px 40px;
+  font-size: 25px;
+  border: 2px solid tomato;
+  color: tomato;
+  background-color: none;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.button9:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
+  z-index: -1;
+  /*! 👇 0 from the top left and top right (not having curve and 50% for bottom right and bottom left(to have a curve))*/
+  border-radius: 0 0 50% 50%;
+  /*! 👇 hides the red background*/
+  height: 0%;
+  transition: all 0.5s;
+}
+.button9:hover {
+  color: white;
+}
+.button9:hover:before {
+  height: 190%;
+}
+
+/* button 10 */
+.button10 {
+  border: 2px solid crimson;
+  padding: 20px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: whitesmoke;
+  color: crimson;
+  font-family: monospace;
+  font-size: 20px;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.button10:before {
+  border: 2px solid greenyellow;
+  content: "Hover Me";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: crimson;
+  background-color: greenyellow;
+  transform: rotateX(270deg);
+  transform-origin: top;
+  transition: all 0.5s;
+}
+
+.button10:after {
+  border: 2px solid crimson;
+  content: "Hover Me";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: white;
+  background-color: crimson;
+  transform: rotateX(270deg);
+  transform-origin: bottom;
+  transition: all 0.5s;
+  transition-delay: 0.25s;
+}
+.button10:hover:before,
+.button10:hover:after {
+  transform: rotateX(0deg);
+}
+
+/* button 11 */
+
+.button11 {
+  padding: 20px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  /*! 👇 makes the text invisible */
+  color: transparent;
+  border: 3px solid #ff0;
+  font-size: 30px;
+  position: relative;
+}
+
+.button11:before {
+  content: "Hover Me";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #363636;
+  color: #ff0;
+  display: grid;
+  place-items: center;
+  transition: all 0.5s;
+}
+
+.button11:hover:before {
+  left: 100%;
+  transform: scale(0) rotateY(360deg);
+  opacity: 0;
+}
+
+.button11:after {
+  content: "Hover Me";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: #363636;
+  color: #ff0;
+  display: grid;
+  place-items: center;
+  transition: all 0.5s;
+  transform: scale(0) rotateY(0deg);
+  opacity: 0;
+}
+
+.button11:hover:after {
+  left: 0;
+  transform: scale(1) rotateY(360deg);
+  opacity: 1;
+}
+
+/* button 12 */
+
+.button12 {
+  width: 220px;
+  height: 80px;
+  color: slateblue;
+  background-color: transparent;
+  font-size: 26px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 80px;
+  transition: all 0.5s;
+  position: relative;
+}
+
+.button12:before,
+.button12:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: slateblue;
+  /* *📑 Because we put the top property to be 50% the top edge of the cirlces sits at 50% from the top of the link.To center the center point of the cirles to be 50% from the top of the link we must translate them towards the top by half of their height `translateY(-50%)` */
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+  opacity: 0;
+}
+
+.button12:before {
+  /* * 📑 this will position the before cirlcle on the left side of the link itself not the text inside of the link 👇*/
+
+  left: 0;
+
+  /* * 📑 box-shadow: accepts 4 values.
+  *.- horizontal distance between the element and the shadow that is added.ex: if we add 10px the shadow will be 10px from the element to the right.(-100px move it 100px to the left)
+  *.- vertical distance between the element and the shadow.(0 stay at the same place as the element)
+  *.- how blurry the shadow will be (0 no blurrynes)
+  *.- color of the shadow 👇*/
+
+  box-shadow: -100px 0 0 slateblue;
+  z-index: -1;
+}
+
+.button12:after {
+  right: 0;
+  box-shadow: 100px 0 0 slateblue;
+  z-index: -1;
+}
+
+.button12:hover:before {
+  /* * 📑 this will move the before pseudo element to the right by 50% of the length widht and the shadow will move with it.*/
+
+  left: 50%;
+  box-shadow: 30px 0 0 slateblue;
+
+  /* * 📑left 50% means that the before pseudo element will move untill its left edge is exactly at 50%,in order to make the center of the cirlce to be exactly at the 50% of the link widths, we are translate it back to the left by half of its widht(translateX(-50%)) */
+
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+}
+
+.button12:hover:after {
+  right: 50%;
+  box-shadow: -30px 0 0 slateblue;
+  transform: translateX(50%) translateY(-50%);
+  opacity: 1;
+}
+.button12 span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: slateblue;
+  border-radius: 8px;
+  transform: scale(0);
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+.button12:hover span {
+  transform: scale(1);
+  /*!👇 waits for the cirles to come in */
+  transition-delay: 0.3s;
+}
+
+.button12:hover {
+  color: white;
+}

@@ -1,0 +1,14 @@
+ img {
+   display: block;
+   margin: auto;
+   margin-top: 200px;
+   transition: transform 2s;
+ }
+
+ img:hover {
+   /* transform: translateX(-500px); */
+   /* transform: translateY(500px); */
+   /* translateX-translateY */
+   transform: translate(-500px, 200px);
+
+ }

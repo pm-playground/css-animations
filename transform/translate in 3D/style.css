@@ -1,0 +1,22 @@
+.container {
+  perspective: 500px;
+}
+
+img  {
+   display: block;
+   margin: auto;
+   margin-top: 200px;
+   transition: transform 2s;
+ }
+
+ /* img:hover {
+   transform: translateZ(300px);
+ } */
+
+
+ img:hover {
+  /* transform: rotateX(90deg); */
+  transform: rotateY(60deg);
+ 
+  /* transform: rotateZ(120deg); */
+}

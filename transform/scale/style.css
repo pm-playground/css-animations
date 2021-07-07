@@ -1,0 +1,14 @@
+ img {
+   display: block;
+   margin: auto;
+   margin-top: 200px;
+   transition: transform 2s;
+ }
+
+ img:hover {
+
+   /* transform: scaleX(.5); */
+   /* transform: scaleY(.5); */
+   transform: scale(.25);
+
+}
