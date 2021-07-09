@@ -660,7 +660,6 @@ h1 {
 }
 
 /* button 15 */
-
 .button15 {
   text-decoration: none;
   font-size: 40px;
@@ -699,4 +698,76 @@ h1 {
 
 .button15:active {
   border: 2px solid tomato;
+}
+
+/* button 16 */
+/*! this button have a span tag wrapping the text in order to create four parts of the background that will cover the button*/
+/** 📓 2 for the :before and :after on the anchor tag and 2 for the :before and :after for the span */
+
+.button16 {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: firebrick;
+  letter-spacing: 3px;
+  padding: 25px 50px;
+  border: 3px solid firebrick;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+}
+
+.button16:before,
+.button16:after,
+.button16 span:before,
+.button16 span:after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: firebrick;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
+.button16:before {
+  top: 0;
+  left: -25%;
+}
+
+.button16:hover:before {
+  top: 0;
+  left: 0;
+}
+
+.button16:after {
+  top: -100%;
+  left: 25%;
+}
+
+.button16:hover:after {
+  top: 0;
+  left: 25%;
+}
+
+.button16 span:before {
+  top: 100%;
+  right: 25%;
+}
+.button16:hover span:before {
+  top: 0%;
+  right: 25%;
+}
+.button16 span:after {
+  top: 0;
+  right: -25%;
+}
+
+.button16:hover span:after {
+  top: 0;
+  right: 0;
+}
+
+.button16:hover {
+  color: white;
 }
