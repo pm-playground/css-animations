@@ -561,3 +561,69 @@ h1 {
 .button12:hover {
   color: white;
 }
+
+/* button 13 */
+
+.button13 {
+  width: 300px;
+  height: 60px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  line-height: 60px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  position: relative;
+  transition: all 0.2s;
+  color: white;
+}
+
+.button13:before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  background-color: blueviolet;
+  z-index: -1;
+  /*! 👇to blend the colors in before and after pseuod elements */
+  mix-blend-mode: multiply;
+  transition: all 0.2s;
+  /*! 👇 change the ancor point of wich the elements is moving */
+  transform-origin: top;
+}
+
+.button13:after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
+  z-index: -1;
+  /*! 👇to blend the colors in before and after pseuod elements */
+  mix-blend-mode: multiply;
+  transition: all 0.2s;
+  transform-origin: bottom;
+}
+
+.button13:hover:before {
+  top: -6px;
+  left: 0;
+  /*! 👇in order to use 3d we need to add perspective*/
+  transform: perspective(1000px) rotateX(75deg);
+}
+.button13:hover:after {
+  top: 6px;
+  left: 0;
+  /*! 👇in order to use 3d we need to add perspective*/
+  transform: perspective(1000px) rotateX(-75deg);
+}
+
+.button13:hover {
+  color: #272727;
+}
