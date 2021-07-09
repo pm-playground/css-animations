@@ -18,7 +18,7 @@ h1 {
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 4em;
   place-items: center;
   margin-bottom: 2em;
@@ -430,7 +430,7 @@ h1 {
 }
 
 .button11:before {
-  content: "Hover Me";
+  content: "11:Hover Me";
   position: absolute;
   top: 0;
   left: 0;
@@ -450,7 +450,7 @@ h1 {
 }
 
 .button11:after {
-  content: "Hover Me";
+  content: "11:Hover Me";
   position: absolute;
   top: 0;
   left: -100%;
@@ -836,7 +836,7 @@ h1 {
   text-transform: uppercase;
   cursor: pointer;
   position: relative;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .button18:before {
